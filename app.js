@@ -8,6 +8,9 @@ app.use(express.urlencoded({ extended: true }));
 let LIBRARY = [];
 let LENGTH = 0;
 
+app.get("/", (req, res) => {
+  res.status(200).send("App is Working!");
+});
 
 app.get("/health", (req, res) => {
   res.status(200).send("Don't panic.");
